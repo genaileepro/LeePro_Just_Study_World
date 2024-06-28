@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    // <---- 자바스크립트 영역 ---->
+    const buttonClick = () => {
+        alert('클릭 !');
+    };
+
+    return (
+        /* <---- HTML/JSX 영역  ---->*/
+        <div
+            style={{
+                height: '100vh',
+                display: ' flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            {/* 이곳에 퀴즈를 위한 html 코드를 작성해 주세요 */}
+            <span>이것은 내가 만든 APP컴포넌트 입니다.</span>
+            <button onClick={buttonClick}> 클릭!</button>
+        </div>
+    );
 }
 
 export default App;
